@@ -2,5 +2,5 @@
 
 Working repo for computational drug discovery workspace (Dementia related molecules via ChEMBL).
 
-References
+References <hr>
 https://github.com/shashwat0105/Bioinformatics-Drug-Discovery/tree/main
