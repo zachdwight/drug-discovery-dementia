@@ -121,6 +121,8 @@ import seaborn as sns
 sns.set(style='ticks')
 import matplotlib.pyplot as plt
 
+# You'll notice I've diverged slightly from some of the normalization of the original code project
+# These are a couple example charts but I'm working on some better normalization + plot fixes but they do work as is
 
 #CLASSES FREQUENCY CHART
 plt.figure(figsize=(5.5, 5.5))
