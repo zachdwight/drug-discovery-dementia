@@ -1,2 +1,3 @@
-# Drug Discovery for Dementia (3D) workspace (Dementia related molecules via ChEMBL)
-Working repo for computational drug discovery
+# Drug Discovery for Dementia (3D)
+
+Working repo for computational drug discovery workspace (Dementia related molecules via ChEMBL).
