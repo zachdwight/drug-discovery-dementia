@@ -1,21 +1,17 @@
 import pandas as pd
 from chembl_webresource_client.new_client import new_client #https://www.ebi.ac.uk/chembl/#
 import numpy as np
+from rdkit import Chem
+from rdkit.Chem import Descriptors, Lipinski
+
 #import list of potential molecules
 data = pd.read_csv('dementia_related_molecules.csv')
 
-
-#print(data.CHEMBL_ID.tolist())
 str_list = data.CHEMBL_ID.tolist()
-target = new_client.target
-#target_query = target.search('coronavirus')
+
 molecule = new_client.molecule
 mols = molecule.filter(molecule_chembl_id__in=str_list)
 targets = pd.DataFrame.from_dict(mols)
-#print(targets)
-
-
-
 
 
 #column_names = list(targets.columns.values)
@@ -29,11 +25,7 @@ activity = new_client.activity
 res = activity.filter(molecule_chembl_id = selected_target).filter(standard_type = "IC50")
 
 
-
 df = pd.DataFrame.from_dict(res) 
-#column_names = list(df.columns.values)
-#print(column_names)
-print(df.head(5))
      
 df.standard_type.unique()
 df.to_csv('bioactivity_data_raw_dementia.csv', index=False)
@@ -71,10 +63,6 @@ df4=df3
 df4.to_csv('bioactivity_data_preprocessed_dementia.csv', index=False)
 
 ########################## PART II
-
-import numpy as np
-from rdkit import Chem
-from rdkit.Chem import Descriptors, Lipinski
 
 
 
