@@ -1,5 +1,10 @@
 import pandas as pd
-from chembl_webresource_client.new_client import new_client #https://www.ebi.ac.uk/chembl/#
+from chembl_webresource_client.new_client import new_client 
+
+
+# https://www.ebi.ac.uk/chembl/#
+# much of this is taken from https://github.com/shashwat0105/Bioinformatics-Drug-Discovery/tree/main
+
 import numpy as np
 from rdkit import Chem
 from rdkit.Chem import Descriptors, Lipinski
